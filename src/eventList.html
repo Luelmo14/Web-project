@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProEvents | List of Events</title>
+    <link rel="icon" href="/media/navBarLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/eventListStyle.css">
+</head>
+<body>
+    <header>
+        <div id="flex-container">
+            <a href="index.html"><img class="headerNav headerNavImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo" width="115"></a>
+            <a class="headerNav" href="friends.html">FRIENDS</a>
+            <div class="dropdown">
+                <div>
+                    <a class="headerNav" href="eventList.html">EVENTS</a>
+                    <a><img id="downIcon" src="/media/downIcon.png" alt="dropDown Icon" width="11"></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="createEvent.html">· Create Event</a>
+                    <a href="eventList.html">· List All</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div>
+                    <a class="loginUserName" href="accountSettings.html">User Name</a>
+                    <a class="loginButton" href="login.html"><img src="/media/userIcon.png" alt="ProEvents Logo" width="33"></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="accountSettings.html">· Account Settings</a>
+                    <a href="signOut.html">· Sign Out</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-container">
+            <div class="mobileHeader">
+                <a href="index.html"><img class="headerNavImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo" width="115"></a>
+                <label class="btnControl" onclick="show(); change()">
+                    <img id="hamburger" src="/media/hamburger.png" alt="hamburger-cross Image">
+                </label>
+                <script>
+                    function change() {
+                        const img1 = "media/hamburger.png", img2 = "media/cross.png";
+                        const imgElement = document.getElementById('hamburger');
+
+                        if (imgElement.src.match(img1)) {
+                            imgElement.src = img2;
+                        } else {
+                            imgElement.src = img1;
+                        }
+                    }
+                </script>
+            </div>
+            <script>
+                function show() {
+                    const element = document.getElementById('sidebar'),
+                        style = window.getComputedStyle(element),
+                        top = style.getPropertyValue('display');
+
+                    const x = document.getElementById("sidebar");
+                    if (top === "none") { x.style.display = "block"; }
+                    else { x.style.display = "none"; }
+                }
+            </script>
+            <nav id="sidebar">
+                <ul>
+                    <li class="primaryLi" id="firstLi">
+                        <a class="linkLi" href="friends.html"></a>
+                        <a class="primary" href="friends.html">FRIENDS</a>
+                        <a href="friends.html"><img class="primaryIcon" src="/media/friendsIcon.png" alt="friendsIcon" width="45"></a>
+                    </li>
+                    <li class="primaryLi">
+                        <a class="linkLi" href="eventList.html"></a>
+                        <a class="primary" href="eventList.html">EVENTS</a>
+                        <a href="eventList.html"><img class="primaryIcon" src="/media/eventsIcon.png" alt="eventsIcon" width="45"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="createEvent.html"></a>
+                        <a class="secondary" href="createEvent.html">Create Event</a>
+                        <a href="createEvent.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="eventList.html"></a>
+                        <a class="secondary" href="eventList.html">List All</a>
+                        <a href="eventList.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li class="primaryLi">
+                        <a class="linkLi" href="accountSettings.html"></a>
+                        <a class="primary" href="accountSettings.html">USER NAME</a>
+                        <a href="accountSettings.html"><img class="primaryIcon" src="/media/userIcon.png" alt="userIcon" width="45"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="accountSettings.html"></a>
+                        <a class="secondary" href="accountSettings.html">Account Settings</a>
+                        <a href="accountSettings.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li id="lastLi" class="secondaryLi">
+                        <a class="linkLi2" href="signOut.html"></a>
+                        <a class="secondary" href="signOut.html">Sign Out</a>
+                        <a href="signOut.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="titleDiv">
+            <div class="item">
+                <h1 id="marginMobileTitle2">All Events</h1>
+                <h1 id="eventsTitle">All Events</h1>
+            </div>
+            <div class="item pushRight">
+                <label id="searchLabel" for="searchEvents">Search Events</label>
+                <input type="text" id="searchEvents" placeholder="Search events">
+            </div>
+        </div>
+        <div class="item2">
+            <input type="checkbox" id="checkbox">
+            <label id="orderCheckbox" for="checkbox">Order by user score</label>
+        </div>
+        <section>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">8.5</p>
+                </div>
+            </div>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">4.5</p>
+                </div>
+            </div>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">7.2</p>
+                </div>
+            </div>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">2.1</p>
+                </div>
+            </div>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">9.8</p>
+                </div>
+            </div>
+            <div class="parentDiv">
+                <a class="inline gridImgPositioning" href="eventProfile.html">
+                    <img class="eventImageSection" src="/media/eventImage1.jpg" alt="eventImage">
+                </a>
+                <a class="inline gridTitlePositioning" href="eventProfile.html">
+                    <h2>Title</h2>
+                </a>
+                <div class="inline eventDateSection">
+                    <div class="inline eventDateSectionChildDiv">
+                        <p class="inline ">23/02/2022</p>
+                        <p class="inline hyphen">-</p>
+                    </div>
+                    <p class="inline lastDate">25/02/2022</p>
+                </div>
+                <p class="eventLocationSection">Location</p>
+                <form class="eventJoinButtonSection" action="joinEvent.js" method="post">
+                    <input class="joinButton" type="submit" name="join" value="Join" />
+                </form>
+                <form class="eventShareButtonSection" action="shareEvent.js" method="post">
+                    <input class="shareButton" type="submit" name="share" value="Share" />
+                </form>
+                <div class="eventRatingSection">
+                    <img class="inline ratingImage" src="/media/rating.png" alt="ratingImage">
+                    <p class="inline">1.9</p>
+                </div>
+            </div>
+        </section>
+        <div id="marginToFooter"></div>
+        <div class="addEventButtonDiv">
+            <form action="createEvent.html">
+                <button type="submit" class="addEventButton">ADD EVENT</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerSection">
+            <a href="index.html"><img class="footerLogoImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo"></a>
+            <div>
+                <nav class="footerNav">
+                    <a class="footerNav2" href="friends.html">FRIENDS</a>
+                    <div class="footerNav2 dropUp">
+                        <a class="footerNav2" href="eventList.html">EVENTS <img id="upIcon" src="/media/upIcon.png" alt="dropDown Icon"></a>
+                        <div class="dropUp-content">
+                            <a href="createEvent.html">· Create Event</a>
+                            <a href="eventList.html">· List All</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

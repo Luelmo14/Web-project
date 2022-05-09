@@ -1,0 +1,18 @@
+html {
+    padding: 0;
+    border: 0;
+    font-family: calibri, serif;
+    background: url(/media/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.alignment {
+    margin: 300px auto;
+}
+
+h1, p {
+    text-align: center;
+}

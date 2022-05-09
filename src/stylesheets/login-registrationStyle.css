@@ -1,0 +1,213 @@
+html {
+    padding: 0;
+    border: 0;
+    font-family: calibri, serif;
+    background: url(/media/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.loginTitle {
+    width: 30%;
+    position: relative;
+    padding: 0;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginTitle img {
+    display: flex;
+    width: 140px;
+    filter: drop-shadow(-0.08em -0.08em 0.15em #878787);
+}
+
+.loginTitle img:hover {
+    opacity: 0.85;
+}
+
+#backArrowLogin {
+    width: 35px;
+    display: flex;
+    position: absolute;
+    left: -90px;
+    top: 10px;
+    transform: rotate(180deg);
+}
+
+#backArrowLogin:hover {
+    opacity: 0.85;
+}
+
+form {
+    justify-content: center;
+    text-align: center;
+}
+
+.loginForm {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#signInTitle {
+    width: 60%;
+    text-align: left;
+    margin: 20px auto 10px;
+    min-width: 285px;
+    max-width: 360px;
+    font-size: 27px;
+}
+
+.signInP {
+    width: 60%;
+    text-align: left;
+    margin: 20px auto 10px;
+    min-width: 285px;
+    max-width: 360px;
+}
+
+.loginInput {
+    margin-top: 13px;
+    width: 60%;
+    padding: 12px 20px 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 16px;
+    max-width: 360px;
+    min-width: 285px;
+}
+
+.loginInputPassword {
+    margin-bottom: 50px;
+}
+
+.loginButtons {
+    margin-top: 5px;
+    background-color: #a295f3;
+    color: white;
+    padding: 12px 0 12px 0;
+    border: 2px solid #4c4cff;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 360px;
+    min-width: 285px;
+}
+
+.loginButtonsLogIn {
+    margin-bottom: 8px;
+}
+
+.noAccountP {
+    width: 60%;
+    text-align: left;
+    margin: 20px auto 0;
+    min-width: 285px;
+    max-width: 360px;
+}
+
+/* REGISTRATION */
+input[type="file"] {
+    display: none;
+}
+
+.uploaderDiv {
+    width: 60%;
+    text-align: left;
+    margin: 20px auto 10px;
+    min-width: 285px;
+    max-width: 360px;
+}
+
+.imageUploader {
+    display: inline-block;
+    background-color: #a295f3;
+    border: 2px solid #4c4cff;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 20px 12px 0;
+    cursor: pointer;
+    margin-top: -7px;
+    margin-bottom: 8px;
+}
+
+#uploadImage {
+    filter: invert(1);
+    width: 17px;
+    margin-left: 10px;
+}
+
+i {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.childButton {
+    justify-content: center;
+    text-align: center;
+}
+
+.registerP {
+    margin: 8px auto 10px;
+}
+
+.registerForm {
+    margin-top: -20px;
+}
+
+.registerButtons {
+    margin-bottom: 0;
+}
+
+.registerTitle {
+    margin: 38px auto 50px;
+}
+
+/* DESKTOP CLASSES */
+
+.loginImage {
+    position: absolute;
+    height: 420px;
+    border-radius: 8px;
+    filter: drop-shadow(0.18em 0.18em 0.25em #878787);
+    margin-left: 24px;
+}
+
+.divsToLeft {
+    margin-right: 400px;
+}
+
+.registerImage {
+    margin-top: 5px;
+    height: 521px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    .divsToLeft {
+        width: 100%;
+    }
+    .loginImage {
+        display: none;
+    }
+    .signInP {
+        margin-top: -10px;
+        text-align: center;
+    }
+    #signInTitle {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+}

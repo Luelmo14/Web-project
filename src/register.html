@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProEvents | Registration</title>
+    <link rel="icon" href="/media/navBarLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/login-registrationStyle.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+</head>
+<body>
+    <main>
+        <div class="loginTitle registerTitle">
+            <a href="index.html"><img id="backArrowLogin" src="/media/backArrowLogin.png" alt="backArrowLogin"></a>
+            <a href="index.html"><img src="/media/ProEventsLogo.png" alt="ProEvents Logo"></a>
+        </div>
+        <section>
+            <div class="loginForm registerForm">
+                <form action="register.js" method="post">
+                    <div>
+                        <img class="loginImage registerImage" src="/media/eventLogin3.jpg" alt="loginImage">
+                    </div>
+                    <div class="divsToLeft">
+                        <div>
+                            <h1 id="signInTitle">CREATE A NEW ACCOUNT</h1>
+                            <p class="signInP registerP">Fill in the necessary fields</p>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput" type="text" name="name" placeholder="Name" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput" type="text" name="surname" placeholder="Surname" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput" type="email" name="email" placeholder="Email" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput" type="password" name="password" placeholder="Password" required>
+                            </label>
+                        </div>
+                        <div>
+                            <div class="uploaderDiv">
+                                <label class="imageUploader">
+                                    <input type="file" accept="image/*"/>
+                                    <img id="uploadImage" src="/media/upload.png" alt="uploadImage">
+                                    <i>Upload Image</i>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <input class="loginButtons loginButtonsLogIn registerButtons" type="submit" name="submit" value="Register">
+                        </div>
+                    </div>
+                </form>
+                <div class="divsToLeft childButton">
+                    <p class="noAccountP">Already have an account?</p>
+                    <form action="login.html">
+                        <button class="loginButtons" formnovalidate>Log In</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

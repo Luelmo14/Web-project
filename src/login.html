@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProEvents | Log-In</title>
+    <link rel="icon" href="/media/navBarLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/login-registrationStyle.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+</head>
+<body>
+    <main>
+        <div class="loginTitle">
+            <a href="index.html"><img id="backArrowLogin" src="/media/backArrowLogin.png" alt="backArrowLogin"></a>
+            <a href="index.html"><img src="/media/ProEventsLogo.png" alt="ProEvents Logo"></a>
+        </div>
+        <section>
+            <div class="loginForm">
+                <form action="login.js" method="post">
+                    <div>
+                        <img class="loginImage" src="/media/eventLogin2.jpg" alt="loginImage">
+                    </div>
+                    <div class="divsToLeft">
+                        <div>
+                            <h1 id="signInTitle">SIGN IN</h1>
+                            <p class="signInP">Enter your e-mail address and password</p>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput" type="email" name="emailAddress" placeholder="Email Address" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="loginInput loginInputPassword" type="password" name="password" placeholder="Password" required>
+                            </label>
+                        </div>
+                        <div>
+                            <input class="loginButtons loginButtonsLogIn" type="submit" name="submit" value="Log In">
+                        </div>
+                    </div>
+                </form>
+                <div class="divsToLeft childButton">
+                    <p class="noAccountP">Don't have an account?</p>
+                    <form action="register.html">
+                        <button class="loginButtons" formnovalidate>Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

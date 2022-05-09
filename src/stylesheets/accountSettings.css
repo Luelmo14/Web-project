@@ -1,0 +1,327 @@
+html {
+    padding: 0;
+    border: 0;
+    font-family: calibri, serif;
+    background: url(/media/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#accountSettingsHeader {
+    height: 150px;
+    background-color: #b2acfa;
+    background-image: url("/media/backgroundHeader2.png");
+    border-bottom: 4px solid #6558f5;
+    padding-top: 20px;
+}
+
+#accountSettingsHeader div {
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+#accountSettingsTitle {
+    text-align: center;
+}
+
+#backArrowLogin {
+    width: 35px;
+    display: flex;
+    position: absolute;
+    left: -46px;
+    top: 1px;
+    transform: rotate(180deg);
+}
+
+#backArrowLogin:hover {
+    opacity: 0.85;
+}
+
+.parentDiv {
+    display: flex;
+    white-space: nowrap;
+    border-top: 3px solid #bcc4d4;
+    border-bottom: 3px solid #bcc4d4;
+}
+
+.parentDivNonBorder {
+    border-top: none;
+}
+
+.parentDivNonBorder2 {
+    border: none;
+    white-space: normal;
+}
+
+section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleH2 {
+    margin-top: 35px;
+    font-size: 25px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.titleH3 {
+    width: 35%;
+    color: #4e5a60;
+}
+
+.titleH3v2 {
+    width: 75%;
+    color: #4e5a60;
+}
+
+.userIcon {
+    width: 43px;
+    height: 43px;
+    margin-top: 8px;
+}
+
+.widthForImage {
+    width: 10%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+i {
+    font-style: normal;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: right;
+}
+
+.imageUploader {
+    display: flex;
+    width: 55%;
+    color: #6558f5;
+    cursor: pointer;
+    justify-content: end;
+    align-items: center;
+}
+
+#userNameP {
+    width: 10%;
+    font-size: 18px;
+}
+#userEmailP {
+    width: 10%;
+    font-size: 18px;
+}
+#userPasswordP {
+    width: 10%;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#widthForEditButton {
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#widthForEditButton2 {
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#widthForEditButton3 {
+    width: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#widthForSaveButton {
+    width: 55%;
+    display: none;
+    justify-content: end;
+    align-items: center;
+}
+#widthForSaveButton2 {
+    width: 55%;
+    display: none;
+    justify-content: end;
+    align-items: center;
+}
+#widthForSaveButton3 {
+    width: 55%;
+    display: none;
+    justify-content: end;
+    align-items: center;
+}
+
+#editButton {
+    text-decoration: underline;
+    font-size: 18px;
+    color: #6558f5;
+    cursor: pointer;
+}
+#editButton2 {
+    text-decoration: underline;
+    font-size: 18px;
+    color: #6558f5;
+    cursor: pointer;
+}
+#editButton3 {
+    text-decoration: underline;
+    font-size: 18px;
+    color: #6558f5;
+    cursor: pointer;
+}
+
+#saveButton {
+    display: none;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+    color: forestgreen;
+}
+#saveButton2 {
+    display: none;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+    color: forestgreen;
+}
+#saveButton3 {
+    display: none;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+    color: forestgreen;
+}
+
+#editNameLabel {
+    display: none;
+}
+#editEmailLabel {
+    display: none;
+}
+#editPasswordLabel {
+    display: none;
+}
+
+.loginInput {
+    margin-top: 6px;
+    padding: 12px 20px 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.widthForAverageScore {
+    width: 25%;
+    justify-content: end;
+    align-items: center;
+}
+
+.averageScoreP {
+    font-size: 18px;
+    color: #4e5a60;
+    font-weight: bold;
+}
+
+#deleteAccountDiv {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    min-width: 230px;
+}
+
+#deleteAccountButton {
+    width: 100%;
+    margin-top: 28px;
+    color: #ff3232;
+    background-color: #efefef;
+    padding: 12px 0 12px 0;
+    border: 3px solid #ff7f7f;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+#deleteAccountButton:hover {
+    background-color: #ff7f7f;
+    color: #efefef;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 600px) {
+    section {
+        width: 70%;
+        background-color: gainsboro;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 3px solid #909090;
+        border-radius: 11px;
+        margin-top: 30px;
+    }
+    .parentDivNonBorder3 {
+        border: none;
+    }
+    #deleteAccountDiv {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        width: 50%;
+        background-color: #E0E0E0;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 3px solid #909090;
+        border-radius: 11px;
+        margin-top: 30px;
+    }
+    .parentDivNonBorder3 {
+        border: none;
+    }
+    #deleteAccountDiv {
+        width: 20%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .loginInput {
+        width: 140px;
+    }
+}
+
+@media screen and (min-width: 441px) {
+    #accountSettingsTitle {
+        margin-top: 36px;
+    }
+}
+
+@media screen and (max-width: 441px) {
+    #backArrowLogin {
+        margin-top: 18px;
+    }
+    .loginInput {
+        width: 90px;
+        margin-left: 17px;
+    }
+}
+

@@ -1,0 +1,77 @@
+html {
+    padding: 0;
+    border: 0;
+    font-family: calibri, serif;
+    background: url(/media/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Margin Mobile */
+#marginMobileTitle2 {
+    display: none;
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    text-shadow: 0.02em 0.02em 1px #878787;
+}
+/* END of Margin Mobile */
+
+#friendProfileTitle {
+    margin-top: 60px;
+}
+
+section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#parentDiv {
+    text-align: center;
+}
+
+#imageDiv {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profileImage {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 225px;
+    box-shadow: #878787 4px 4px 5px;
+}
+
+.inline {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.nameMargin {
+    margin-right: 40px;
+}
+
+#emailP {
+    font-size: 1.1em;
+    margin-top: -4px;
+    margin-bottom: 80px;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+    #friendProfileTitle {
+        display: none;
+    }
+    #marginMobileTitle2 {
+        display: block;
+    }
+}

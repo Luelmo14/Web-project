@@ -1,0 +1,195 @@
+/* Set a font and a background image for the page */
+html {
+    padding: 0;
+    border: 0;
+    font-family: calibri, serif;
+    background: url(/media/background2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* create a margin for all the main content on the page */
+section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* create a style for the title and edit margins for the underneath paragraph to come closer */
+#createEventTitle {
+    padding-top: 4%;
+    padding-bottom: 2%;
+    text-shadow: 0.02em 0.02em 2px #878787;
+    color: #292929;
+    margin-bottom: -23px;
+}
+
+/* create a style for the paragraph underneath the title and create a margin to the content below */
+#underneathTitleP {
+    margin-bottom: 30px;
+}
+
+/* create a style for the image with an absolute position */
+#createEventImage {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    width: 50%;
+    filter: drop-shadow(-0.16em 0.16em 5px #787878);
+    z-index: -1;
+}
+
+/* create some space between each parentDiv */
+.parentDiv {
+    margin-bottom: 20px;
+}
+
+/* create a style for each input field and a width correspondent to the overall look of the page */
+.input {
+    width: 60%;
+    padding: 10px 28px 10px 11px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 19px;
+    max-width: 360px;
+    min-width: 285px;
+    font-weight: normal;
+}
+
+/* make a bit wider the width of the description input field */
+.setDescriptionInputWidth {
+    max-width: 500px;
+    width: 100%;
+}
+/* make a bit less wide the width of the start and end date selector */
+.setDateInputWidth {
+    width: 240px;
+    min-width: 190px;
+}
+/* creation of a margin between each date selector when inline */
+.marginToEndDate {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+/* make a bit less wide the number of participants input field */
+.setParticipantsWidth {
+    max-width: 224px;
+    min-width: 224px;
+}
+/* make a lit less wide the type input field */
+.setTypeInputWidth {
+    max-width: 257px;
+    min-width: 257px;
+}
+
+/* create a class to specify an inline-block display */
+.inline {
+    display: inline-block;
+}
+
+/* make the label of each input to 'display: block' to stay on top of it */
+input, label {
+    display:block;
+    font-weight: bold;
+}
+
+/* erase the default text of the image selector */
+input[type="file"] {
+    display: none;
+}
+
+/* create a style for the label of the image selector */
+.imageUploader {
+    display: inline-block;
+    background-color: ghostwhite;
+    border: 2px solid #4c4cff;
+    border-radius: 6px;
+    color: #4c4cff;
+    padding: 9px 20px 9px 0;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+/* make the upload logo inline-block (to stay next to the text) and specify some margins for its position */
+#uploadImage {
+    display: inline-block;
+    width: 20px;
+    margin-left: 11px;
+    margin-right: 5px;
+}
+
+/* make the text inside the label inline-block (to stay next to the upload image) and change the style and positioning */
+#uploadI {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: 2px;
+}
+/* make the text for mobile inside the label non visible */
+#uploadIMobile {
+    display: none;
+}
+
+/* make the textarea occupy all the horizontal space available */
+textarea {
+    width: 100%;
+}
+
+/* make the inner button of the input number a bit bigger */
+input[type="number"]::-webkit-inner-spin-button {
+    zoom: 1.7;
+    height: 15px;
+}
+
+/* create a style for the 'ADD EVENT' button, with some top and bottom margins */
+.submitButton {
+    margin-top: 5px;
+    background-color: #a295f3;
+    color: white;
+    padding: 12px 0 12px 0;
+    border: 2px solid #4c4cff;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 360px;
+    min-width: 285px;
+    margin-bottom: 85px;
+}
+
+/* create a nice style for the 'ADD EVENT' button when hovering over it */
+.submitButton:hover {
+    background-color: #4c4cff;
+    color: white;
+}
+
+
+/* RESPONSIVE */
+
+/* At a maximum width of 900px of the page, make the big image on the right disappear  */
+@media screen and (max-width: 900px) {
+    #createEventImage {
+        display: none;
+    }
+}
+
+/* At a maximum width of 600px of the page, add a padding to the title of the page to stay visible due to the mobile
+    header, and change the image selector label text displaying the mobile text 'upload image' and making disappear
+    the desktop text 'select from your computer' */
+@media screen and (max-width: 600px) {
+    #createEventTitle {
+        padding-top: 100px;
+        padding-bottom: 2%;
+        text-shadow: 0.02em 0.02em 1px #878787;
+    }
+    #uploadI {
+        display: none;
+    }
+    #uploadIMobile {
+        display: inline-block;
+        font-style: normal;
+        vertical-align: 2px;
+    }
+}

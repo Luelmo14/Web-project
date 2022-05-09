@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProEvents | Friend Profile</title>
+    <link rel="icon" href="/media/navBarLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/friendProfileStyle.css">
+</head>
+<body>
+    <header>
+        <div id="flex-container">
+            <a href="index.html"><img class="headerNav headerNavImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo" width="115"></a>
+            <a class="headerNav" href="friends.html">FRIENDS</a>
+            <div class="dropdown">
+                <div>
+                    <a class="headerNav" href="eventList.html">EVENTS</a>
+                    <a><img id="downIcon" src="/media/downIcon.png" alt="dropDown Icon" width="11"></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="createEvent.html">· Create Event</a>
+                    <a href="eventList.html">· List All</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div>
+                    <a class="loginUserName" href="accountSettings.html">User Name</a>
+                    <a class="loginButton" href="login.html"><img src="/media/userIcon.png" alt="ProEvents Logo" width="33"></a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="accountSettings.html">· Account Settings</a>
+                    <a href="signOut.html">· Sign Out</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-container">
+            <div class="mobileHeader">
+                <a href="index.html"><img class="headerNavImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo" width="115"></a>
+                <label class="btnControl" onclick="show(); change()">
+                    <img id="hamburger" src="/media/hamburger.png" alt="hamburger-cross Image">
+                </label>
+                <script>
+                    function change() {
+                        const img1 = "media/hamburger.png", img2 = "media/cross.png";
+                        const imgElement = document.getElementById('hamburger');
+
+                        if (imgElement.src.match(img1)) {
+                            imgElement.src = img2;
+                        } else {
+                            imgElement.src = img1;
+                        }
+                    }
+                </script>
+            </div>
+            <script>
+                function show() {
+                    const element = document.getElementById('sidebar'),
+                        style = window.getComputedStyle(element),
+                        top = style.getPropertyValue('display');
+
+                    const x = document.getElementById("sidebar");
+                    if (top === "none") { x.style.display = "block"; }
+                    else { x.style.display = "none"; }
+                }
+            </script>
+            <nav id="sidebar">
+                <ul>
+                    <li class="primaryLi" id="firstLi">
+                        <a class="linkLi" href="friends.html"></a>
+                        <a class="primary" href="friends.html">FRIENDS</a>
+                        <a href="friends.html"><img class="primaryIcon" src="/media/friendsIcon.png" alt="friendsIcon" width="45"></a>
+                    </li>
+                    <li class="primaryLi">
+                        <a class="linkLi" href="eventList.html"></a>
+                        <a class="primary" href="eventList.html">EVENTS</a>
+                        <a href="eventList.html"><img class="primaryIcon" src="/media/eventsIcon.png" alt="eventsIcon" width="45"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="createEvent.html"></a>
+                        <a class="secondary" href="createEvent.html">Create Event</a>
+                        <a href="createEvent.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="eventList.html"></a>
+                        <a class="secondary" href="eventList.html">List All</a>
+                        <a href="eventList.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li class="primaryLi">
+                        <a class="linkLi" href="accountSettings.html"></a>
+                        <a class="primary" href="accountSettings.html">USER NAME</a>
+                        <a href="accountSettings.html"><img class="primaryIcon" src="/media/userIcon.png" alt="userIcon" width="45"></a>
+                    </li>
+                    <li class="secondaryLi">
+                        <a class="linkLi2" href="accountSettings.html"></a>
+                        <a class="secondary" href="accountSettings.html">Account Settings</a>
+                        <a href="accountSettings.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                    <li id="lastLi" class="secondaryLi">
+                        <a class="linkLi2" href="signOut.html"></a>
+                        <a class="secondary" href="signOut.html">Sign Out</a>
+                        <a href="signOut.html"><img class="dropdownArrow" src="/media/dropDown.png" alt="dropDown Arrow" width="15"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="marginMobileTitle2">Profile</h1>
+            <h1 id="friendProfileTitle">Profile</h1>
+            <div id="parentDiv">
+                <div id="imageDiv">
+                    <img id="profileImage" src="/media/userIcon2.png" alt="profileImage">
+                </div>
+                <div>
+                    <h2 class="inline nameMargin">Name</h2>
+                    <h2 class="inline">Surname</h2>
+                </div>
+                <p id="emailP">friendEmail@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerSection">
+            <a href="index.html"><img class="footerLogoImage" src="/media/ProEventsLogo.png" alt="ProEvents Logo"></a>
+            <div>
+                <nav class="footerNav">
+                    <a class="footerNav2" href="friends.html">FRIENDS</a>
+                    <div class="footerNav2 dropUp">
+                        <a class="footerNav2" href="eventList.html">EVENTS <img id="upIcon" src="/media/upIcon.png" alt="dropDown Icon"></a>
+                        <div class="dropUp-content">
+                            <a href="createEvent.html">· Create Event</a>
+                            <a href="eventList.html">· List All</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
